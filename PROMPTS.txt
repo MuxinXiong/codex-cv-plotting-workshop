@@ -1,0 +1,91 @@
+CODEX WORKSHOP | STUDENT PROMPTS
+Use the Codex desktop interface. Send one prompt at a time and read the reply.
+Codex writes and runs the plotting code, then shows the saved figure.
+
+GET THE DATA
+On this classroom repository's main GitHub page:
+On the repository page, click Code > Download ZIP.
+Windows: right-click the ZIP > Extract All...
+Mac: double-click the ZIP in Finder.
+Open the extracted folder containing README.md, SOURCE_DATA.json, manifest.csv
+and the ten dataset folders as a LOCAL project in Codex. Start a new chat.
+GitHub adds the repository name and branch to the extracted folder name.
+Select the folder containing README.md and the ten dataset folders.
+
+1. INSPECT BEFORE PLOTTING
+Read README.md, SOURCE_DATA.json and manifest.csv before changing files.
+Confirm the ten folders contain original file indices 1-100, 100 files each:
+CE, DISP, E, EC, EC_cat_k, EC_cat_kd, EC_cat_ks, ECE, SR, T.
+Summarize the documented potential/current units, file formats and cycle
+screening policy. Inspect E/Table_4_E.txt. Confirm potential V, total current A,
+and 667 original rows in cycle 2. Check this against its metadata record.
+Report the 100 catalyst-folder files that lack a numerical full-sweep candidate;
+do not silently treat those cycles as complete. Summarize findings and wait
+for my next instruction. Keep every raw file unchanged.
+
+2. MAKE THE FIRST FIGURE
+Plot E/Table_4_E.txt using only its verified cycle 2, with all 667 original rows.
+Skip percent-comment lines; treat the first numeric row as data. Plot total
+current in A versus electric potential in V. Preserve original row order,
+signed values and units. Label the axes Electric potential (V) and
+Total current (A). Note that potential uses the model reference; do not invent
+an experimental reference electrode. Include the source filename and cycle.
+Write and run the plotting code yourself. Save PNG and PDF in outputs,
+then show me the finished figure. Keep the source unchanged. Do not sort
+potential, smooth, resample, normalize, subtract a baseline or invent points.
+
+3. REQUEST ONE STYLE CHANGE
+Make the first figure's line blue and increase its axis label size.
+Keep exactly the same selected rows, row order, signed values and units.
+Save revised PNG and PDF files under new names in outputs.
+Run the code and show me the revised figure. Keep the raw data unchanged.
+
+4. BUILD A SMALL BATCH PILOT
+Read each file's record in SOURCE_DATA.json and manifest.csv. In every one
+of the ten folders, inspect files in numerical filename-index order and choose
+the first five with adequate complete-cycle evidence. Use the documented
+suggested_plot_cycle_from_numeric_evidence and cycle_summaries, then check
+the selected trace; numerical screening alone is not scientific validation.
+Skip and report files whose cycle evidence is ambiguous. Do not force cycle 2
+onto every file. The metadata documents potential V and current A for all
+1,000 exports; confirm the selected file records and handle their actual
+header formats. Most files have percent comments; SR has hash comments
+and a named tab-separated header.
+
+Preserve original row order, signed values, all selected points and units.
+Create one PNG and PDF per chosen file in outputs/<original folder name>,
+using consistent styling. Write and run the code yourself.
+Save a source_index.csv containing figure filename, source relative path,
+source SHA256, selected cycle, potential unit, current unit and plotted row count.
+Save a skipped_files.csv explaining every skipped or unresolved selection.
+Show representative results and the two reports for review.
+Keep all raw files unchanged. Do not sort, smooth, resample, normalize,
+subtract a baseline, invent points or make causal claims about mechanisms.
+
+5. INDEPENDENT PRACTICE: TRY ANOTHER FOLDER
+Inspect SR/Table_4_SR.txt and its metadata. Confirm its Potential/V, Current/A
+and cycle columns. Skip hash-comment lines and read its named tabular header
+correctly. Confirm cycle 2 contains 1,600 original rows.
+Plot current (A) versus potential (V) using those rows in their original order.
+Preserve signed values and units. Include the source filename and cycle,
+save a PNG in outputs/practice, write and run the code yourself, and show it.
+Keep raw data unchanged; do not sort, smooth, resample or invent points.
+Wait for my next instruction to change the figure's appearance.
+
+Then ask for one specific style change of your own. Submit the final PNG,
+the prompt you used, and the source filename and cycle.
+
+OPTIONAL NEXT STEP | AFTER REVIEWING THE PILOT
+Apply the reviewed plotting method to file indices 1-100 in every folder.
+Process only files with adequate cycle evidence; list the remaining files
+for review rather than inventing complete cycles. Preserve raw values,
+units, signs and row order. Keep the same output-folder and source-index
+conventions. Run the work and summarize counts of plotted and skipped files.
+The metadata reports 100 catalyst files without a full-sweep candidate.
+Do not infer why traces differ from folder names alone.
+
+IF THE PLOTTING RUNTIME NEEDS HELP
+Use the Python already installed for this course. Check available interpreters,
+prepare a project environment if needed, and run the plotting code yourself.
+Tell me briefly which interpreter and packages you used.
+Keep the raw data unchanged.
