@@ -3,7 +3,7 @@ Use the Codex desktop interface. Send one prompt at a time and read the reply.
 Codex writes and runs the plotting code, then shows the saved figure.
 
 GET THE DATA
-On this classroom repository's main GitHub page:
+Class repository: https://github.com/MuxinXiong/codex-cv-plotting-workshop
 On the repository page, click Code > Download ZIP.
 Windows: right-click the ZIP > Extract All...
 Mac: double-click the ZIP in Finder.
@@ -89,3 +89,4 @@ Use the Python already installed for this course. Check available interpreters,
 prepare a project environment if needed, and run the plotting code yourself.
 Tell me briefly which interpreter and packages you used.
 Keep the raw data unchanged.
+
