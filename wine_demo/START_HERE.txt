@@ -1,0 +1,19 @@
+WINE DEMO: USE CODEX, THEN REVIEW ITS CODE
+
+Open Wine_Codex_Semi_Automated_Workflow.ipynb in Jupyter.
+Wine_Codex_Student_Preview.html is a read-only browser preview.
+
+The lesson has five commented reference code blocks and one preview plot.
+Give the prompt to Codex, copy its code, read the comments and logic,
+ask about unclear lines, then run reviewed blocks and small checks.
+There are no intentionally planted mistakes or separate input files.
+No helper file is required. The real Wine dataset comes with scikit-learn.
+
+If imports fail, run %pip install numpy matplotlib scikit-learn
+in a notebook cell and restart the kernel.
+Generated summary and figures are saved in wine_report/.
+
+Dataset: Aeberhard, S. & Forina, M. (1992). Wine.
+https://archive.ics.uci.edu/dataset/109/wine
+https://doi.org/10.24432/C5PC7J
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/

@@ -8,3 +8,8 @@
 /.DS_Store
 /Thumbs.db
 /desktop.ini
+
+# Generated files from the Wine notebook
+/wine_demo/wine_report/
+/wine_demo/__pycache__/
+/wine_demo/.ipynb_checkpoints/
